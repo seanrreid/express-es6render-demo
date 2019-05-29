@@ -1,0 +1,7 @@
+<section class="section">
+    <ul>
+        ${rangerList.map(ranger => `
+            <li>${ranger.name}: ${ranger.rank}</li>
+          `).join('')}
+    </ul>
+</section>
