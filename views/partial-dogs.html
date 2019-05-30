@@ -1,0 +1,16 @@
+<section class="section">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Dog Name</td>
+                <td>Dog Breed</td>
+            </tr>
+        </thead>
+        ${listOfDogs.map(dog => 
+            `<tr>
+                <td>${dog.name}</td> 
+                <td>${dog.breed}</td>
+            </tr>`
+            ).join('')}
+    </table>
+</section>

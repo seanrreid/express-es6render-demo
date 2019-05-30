@@ -11,6 +11,18 @@
                 <td>${executive.name}</td> 
                 <td>${executive.year}</td>
             </tr>
-          `).join('')}
+        `).join('')}
     </table>
+</section>
+<section class="section">
+    <p>Add a New CEO</p>
+    <form action="/ceos" method="POST">
+        <label>Name
+            <input type="text" name="name">
+        </label>
+        <label>Year
+            <input type="text" name="year"/>
+        </label>
+        <button type="submit" class='is-primary'>Submit</button>
+    </form>
 </section>

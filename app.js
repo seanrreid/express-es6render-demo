@@ -7,6 +7,7 @@ const express = require('express'),
 const indexRouter = require('./routes/index'),
     rangersRouter = require('./routes/rangers'),
     ceosRouter = require('./routes/ceos');
+    dogsRouter = require('./routes/dogs');
 
 const app = express();
 
@@ -23,5 +24,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/rangers', rangersRouter);
 app.use('/ceos', ceosRouter);
+app.use('/dogs', dogsRouter);
 
 module.exports = app;
