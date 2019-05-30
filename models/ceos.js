@@ -15,7 +15,7 @@ class Executives {
             return err.message;
         }
     }
-    /*
+
     static async add(name, year) {
         const query = `INSERT INTO ceos (name, year) VALUES ('${name}', ${year})`;
 
@@ -27,7 +27,6 @@ class Executives {
             return err;
         };
     }
-    */
 }
 
 module.exports = Executives;

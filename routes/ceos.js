@@ -18,15 +18,14 @@ router.get('/', async (req, res, next) => {
 
 router.post('/', (req,res) => {
     const { name, year } = req.body;
-
-    // Add the executive
+    
     ExecutivesModel.add(name, year)
     .then(async () => {
         const allExecutives = await ExecutivesModel.getAll();
         
         res.status(200).render('template', {
             locals: {
-                title: 'Apple CEOs',
+                title: 'Apple CEOs Updated',
                 executiveList: allExecutives
             },
             partials: {
