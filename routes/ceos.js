@@ -38,4 +38,20 @@ router.post('/', (req,res) => {
     });
 });
 
+router.post('/addMany', (req, res) => {
+    const execArray = [
+        {name: 'Red Ranger', year: 1993},
+        {name: 'Blue Ranger', year: 1994},
+        {name: 'Pink Ranger', year: 1995}
+    ]
+
+    execArray.map(execData => {
+        const { name, year } = execData;
+        ExecutivesModel.add(name, year)
+        .then(() => {
+            console.log("added executive", name, year);
+        })
+    })
+})
+
 module.exports = router;
