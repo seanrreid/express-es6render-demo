@@ -1,7 +1,7 @@
 <section class="section">
     <ul>
         ${rangerList.map(ranger => `
-            <li>${ranger.name}: ${ranger.rank}</li>
+            <li><a href=${ranger.link}>${ranger.name}: ${ranger.rank}</a></li>
           `).join('')}
     </ul>
 </section>
